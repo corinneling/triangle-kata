@@ -13,8 +13,8 @@ class TestTriangleClassifier < Minitest::Test
     assert_instance_of TriangleClassifier, @tri
   end
 
-  def test_does_classify_method_exist
-    assert true, @tri.classify
+  def test_does_classify_take_3_parameters
+    assert true, @tri.classify(1, 2, 3)
   end
 
 end
