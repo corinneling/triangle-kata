@@ -17,4 +17,8 @@ class TestTriangleClassifier < Minitest::Test
     assert true, @tri.classify(1, 2, 3)
   end
 
+  def test_does_classify_return_equilateral_if_all_parameters_are_equal
+    assert_output(/equilateral/) { @tri.classify(3, 3, 3) } 
+  end
+
 end

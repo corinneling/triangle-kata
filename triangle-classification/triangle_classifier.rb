@@ -12,7 +12,12 @@
 # should raise the error ArgumentError.
 
 class TriangleClassifier
+
   def classify length1, length2, length3
-    p "#{length1} #{length2} #{length3}"
+    sides = [length1, length2, length3].uniq.size
+    if sides == 1
+      p 'equilateral'
+    end
   end
+
 end
