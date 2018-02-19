@@ -15,12 +15,10 @@ class TriangleClassifier
 
   def classify length1, length2, length3
     sides = [length1, length2, length3].uniq.size
-    if sides == 1
-      :equilateral
-    elsif sides == 2
-      :isosceles
-    elsif sides == 3
-      :scalene
+    case sides
+    when 1 then :equilateral
+    when 2 then :isosceles
+    when 3 then :scalene
     end
   end
 
