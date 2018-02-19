@@ -17,6 +17,8 @@ class TriangleClassifier
     sides = [length1, length2, length3].uniq.size
     if sides == 1
       p 'equilateral'
+    elsif sides == 2
+      p 'isosceles'
     end
   end
 
