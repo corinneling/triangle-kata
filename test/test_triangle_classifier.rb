@@ -18,18 +18,18 @@ class TestTriangleClassifier < Minitest::Test
   end
 
   def test_does_classify_return_equilateral_if_all_parameters_are_equal
-    assert_output(/equilateral/) { @tri.classify(3, 3, 3) }
+    assert_equal :equilateral, @tri.classify(3, 3, 3)
   end
 
   def test_does_classify_return_equilateral_if_all_parameters_are_equal
-    assert_output(/isosceles/) { @tri.classify(3, 3, 1) }
-    assert_output(/isosceles/) { @tri.classify(3, 5, 3) }
-    assert_output(/isosceles/) { @tri.classify(11, 3, 3) }
+    assert_equal :isosceles, @tri.classify(3, 3, 1)
+    assert_equal :isosceles, @tri.classify(3, 5, 3)
+    assert_equal :isosceles, @tri.classify(11, 3, 3)
   end
 
   def test_does_classify_return_equilateral_if_all_parameters_are_equal
-    assert_output(/scalene/) { @tri.classify(1, 2, 3) }
-    assert_output(/scalene/) { @tri.classify(22, 100, 2) }
+    assert_equal :scalene, @tri.classify(1, 2, 3)
+    assert_equal :scalene, @tri.classify(22, 100, 2)
   end
 
 end
