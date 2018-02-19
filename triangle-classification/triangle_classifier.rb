@@ -19,6 +19,8 @@ class TriangleClassifier
       p 'equilateral'
     elsif sides == 2
       p 'isosceles'
+    elsif sides == 3
+      p 'scalene'
     end
   end
 

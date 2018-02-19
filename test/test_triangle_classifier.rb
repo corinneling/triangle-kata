@@ -27,4 +27,9 @@ class TestTriangleClassifier < Minitest::Test
     assert_output(/isosceles/) { @tri.classify(11, 3, 3) }
   end
 
+  def test_does_classify_return_equilateral_if_all_parameters_are_equal
+    assert_output(/scalene/) { @tri.classify(1, 2, 3) }
+    assert_output(/scalene/) { @tri.classify(22, 100, 2) }
+  end
+
 end
