@@ -6,11 +6,15 @@ require './triangle-classification/triangle_classifier'
 class TestTriangleClassifier < Minitest::Test
 
   def setup
-    @triclass = TriangleClassifier.new
+    @tri = TriangleClassifier.new
   end
 
   def test_does_triangle_classifier_exist
-    assert_instance_of TriangleClassifier, @triclass
+    assert_instance_of TriangleClassifier, @tri
+  end
+
+  def test_does_classify_method_exist
+    assert true, @tri.classify
   end
 
 end
