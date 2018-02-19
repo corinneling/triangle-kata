@@ -1,5 +1,5 @@
 class TriangleClassifier
-  def classify par1, par2, par3
-    p "#{par1} #{par2} #{par3}"
+  def classify length1, length2, length3
+    p "#{length1} #{length2} #{length3}"
   end
 end
