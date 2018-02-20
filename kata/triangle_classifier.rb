@@ -11,13 +11,16 @@
 # should raise the error ArgumentError.
 
 class TriangleClassifier
-
   def classify l1, l2, l3
 
     lengths = [l1, l2, l3]
     (l1, l2, l3), sides = lengths.sort, lengths.uniq.size
 
-    puts 'Those lengths cannot create a real triangle' unless l1 + l2 > l3
+      begin
+      raise ArgumentError.new('Those lengths cannot create a real triangle') unless l1 + l2 > l3
+      rescue
+        puts "There was an error."
+      end
 
     case sides
       when 1 then :equilateral
@@ -26,5 +29,4 @@ class TriangleClassifier
     end
 
   end
-
 end

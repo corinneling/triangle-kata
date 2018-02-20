@@ -27,9 +27,9 @@ class TestTriangleClassifier < Minitest::Test
   end
 
   def test_if_an_argument_error_is_raised_when_numbers_cant_create_real_triangle
-    assert_output(/Those lengths cannot create a real triangle/) { @tri.classify(0, 2, 3) }
-    assert_output(/Those lengths cannot create a real triangle/) { @tri.classify(2, 0, 3) }
-    assert_output(/Those lengths cannot create a real triangle/) { @tri.classify(2, 3, -2) }
+    assert_output(/There was an error./) { @tri.classify(0, 2, 3) }
+    assert_output(/There was an error./) { @tri.classify(0, 0, 0) }
+    assert_output(/There was an error./) { @tri.classify(-10, -20, 12) }
   end
 
 end
