@@ -9,7 +9,7 @@ Project Goals:
 * To practice making commits for every small change
 * Get better at writing commit messages
 
-What I Learned:
+What I've Learned So Far:
 * You can run tests without running your program to see if it works
    * There could still be part of your program not working, but still cool
 * Writing more info for commits helps keep track of what changes were made
