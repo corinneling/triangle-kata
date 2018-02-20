@@ -22,7 +22,8 @@ class TriangleClassifier
     end
   end
 
-  def check_error
-  end 
+  def check_error x
+    raise ArgumentError, 'Those lengths cannot create a real triangle' if x == 0
+  end
 
 end

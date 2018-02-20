@@ -1,7 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require './triangle-classification/triangle_classifier'
+require './kata/triangle_classifier'
 
 class TestTriangleClassifier < Minitest::Test
 
@@ -30,7 +27,11 @@ class TestTriangleClassifier < Minitest::Test
   end
 
   def test_does_error_class_exist
-    assert true, @tri.check_error
+    assert true, @tri.check_error(1)
+  end
+
+  def test_does_error_class_output_an_error_string
+    assert_output(/Those lengths cannot create a real triangle/) { @tri.check_error(0) }
   end
 
 end
