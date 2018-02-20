@@ -13,17 +13,19 @@
 
 class TriangleClassifier
 
-  def classify length1, length2, length3
-    sides = [length1, length2, length3].uniq.size
-    case sides
-    when 1 then :equilateral
-    when 2 then :isosceles
-    when 3 then :scalene
-    end
-  end
+  def classify l1, l2, l3
 
-  def check_error x
-    raise ArgumentError, 'Those lengths cannot create a real triangle' if x == 0
+    lengths = [l1, l2, l3]
+    (l1, l2, l3), sides = lengths.sort, lengths.uniq.size
+
+    puts 'Those lengths cannot create a real triangle' unless l1 + l2 > l3
+
+    case sides
+      when 1 then :equilateral
+      when 2 then :isosceles
+      when 3 then :scalene
+    end
+
   end
 
 end
