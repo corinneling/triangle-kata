@@ -7,5 +7,5 @@ Rake::TestTask.new do |t|
 end
 
 task :start do
-  ruby 'triangle-classification/triangle_classifier.rb'
+  ruby 'kata/triangle_classifier.rb'
 end
