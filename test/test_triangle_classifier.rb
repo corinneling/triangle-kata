@@ -21,15 +21,12 @@ class TestTriangleClassifier < Minitest::Test
     assert_equal :equilateral, @tri.classify(3, 3, 3)
   end
 
-  def test_does_classify_return_equilateral_if_all_parameters_are_equal
+  def test_does_classify_return_isosceles_if_two_parameters_are_equal
     assert_equal :isosceles, @tri.classify(3, 3, 1)
-    assert_equal :isosceles, @tri.classify(3, 5, 3)
-    assert_equal :isosceles, @tri.classify(11, 3, 3)
   end
 
-  def test_does_classify_return_equilateral_if_all_parameters_are_equal
+  def test_does_classify_return_scalene_if_all_parameters_are_not_equal
     assert_equal :scalene, @tri.classify(1, 2, 3)
-    assert_equal :scalene, @tri.classify(22, 100, 2)
   end
 
   def test_does_error_class_exist
