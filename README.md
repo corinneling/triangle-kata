@@ -19,3 +19,4 @@ What I've Learned So Far:
 * I like TDD, it is really nice to be able to make one small change and know exactly what I want my program to do
 * Set up everything - test suite, test coverage etc. before adding code
 * Builds will fail if you push multiple times, each one second after the other
+* ArgumentErrors, and how to set them up with rescues
