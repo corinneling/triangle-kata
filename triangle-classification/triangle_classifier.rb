@@ -22,4 +22,7 @@ class TriangleClassifier
     end
   end
 
+  def check_error
+  end 
+
 end

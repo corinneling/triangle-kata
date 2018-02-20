@@ -32,4 +32,8 @@ class TestTriangleClassifier < Minitest::Test
     assert_equal :scalene, @tri.classify(22, 100, 2)
   end
 
+  def test_does_error_class_exist
+    assert true, @tri.check_error
+  end
+
 end
