@@ -12,17 +12,13 @@
 
 class TriangleClassifier
   def classify l1, l2, l3
+    sides = [l1, l2, l3].sort
 
-    lengths = [l1, l2, l3]
-    (l1, l2, l3), sides = lengths.sort, lengths.uniq.size
+    if sides[0] + sides[1] <= sides[2]
+      raise ArgumentError.new('Those lengths cannot create a real triangle')
+    end
 
-      begin
-      raise ArgumentError.new('Those lengths cannot create a real triangle') unless l1 + l2 > l3
-      rescue
-        puts "There was an error."
-      end
-
-    case sides
+    case sides.uniq.size
       when 1 then :equilateral
       when 2 then :isosceles
       when 3 then :scalene
