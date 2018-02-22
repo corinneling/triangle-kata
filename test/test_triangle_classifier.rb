@@ -32,8 +32,21 @@ class TestTriangleClassifier < Minitest::Test
     assert_equal :scalene, @tri.classify(10, 11, 12)
   end
 
-  # def test_if_an_argument_error_is_raised_when_numbers_cant_create_real_triangle
-  #   assert_raises(ArgumentError) { @tri.classify(1, 2, 3) }
-  # end
+  def test_how_sorting_the_array_is_working
+    sides = [9, 2, 5].sort
+
+    assert_equal [2, 5, 9], sides
+  end
+
+  def see_error
+    sides = [9, 2, 0].sort
+    if sides[0] + sides[1] <= sides[2]
+      puts "error"
+    end
+  end
+
+  def test_how_conditional_is_working
+    assert_output(/error/) { see_error }
+  end
 
 end
