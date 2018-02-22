@@ -24,5 +24,6 @@ class TriangleClassifier
       when 3 then :scalene
     end
 
+
   end
 end
